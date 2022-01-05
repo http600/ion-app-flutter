@@ -342,7 +342,9 @@ class MeetingController extends GetxController {
   }
 
   _hangUp() {
-    Get.dialog(AlertDialog(
+    Get.back();
+    _cleanUp();
+    /*Get.dialog(AlertDialog(
         title: Text("Hangup"),
         content: Text("Are you sure to leave the room?"),
         actions: <Widget>[
@@ -358,11 +360,11 @@ class MeetingController extends GetxController {
               style: TextStyle(color: Colors.red),
             ),
             onPressed: () {
-              Get.toNamed("/login");
+              Get.back();
               _cleanUp();
             },
           )
-        ]));
+        ]));*/
   }
 }
 
