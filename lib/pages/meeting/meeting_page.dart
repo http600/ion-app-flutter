@@ -504,9 +504,9 @@ class MeetingView extends GetView<MeetingController> {
   //tools
   List<Widget> _buildTools() {
     return <Widget>[
-      SizedBox(
-        width: 36,
-        height: 36,
+     /* SizedBox(
+        width: 60,
+        height: 60,
         child: RawMaterialButton(
           shape: CircleBorder(
             side: BorderSide(
@@ -516,16 +516,16 @@ class MeetingView extends GetView<MeetingController> {
           ),
           child: Obx(() => Icon(
                 controller._simulcast.value
-                    ? CommunityMaterialIcons.video_off
-                    : CommunityMaterialIcons.video,
+                    ? CommunityMaterialIcons.chevron_triple_up
+                    : CommunityMaterialIcons.chevron_up,
                 color: controller._simulcast.value ? Colors.red : Colors.white,
               )),
-          onPressed: controller._turnCamera,
+          onPressed: controller._simulcast,
         ),
-      ),
+      ),*/
       SizedBox(
-        width: 36,
-        height: 36,
+        width: 60,
+        height: 60,
         child: RawMaterialButton(
           shape: CircleBorder(
             side: BorderSide(
@@ -543,8 +543,8 @@ class MeetingView extends GetView<MeetingController> {
         ),
       ),
       SizedBox(
-        width: 36,
-        height: 36,
+        width: 60,
+        height: 60,
         child: RawMaterialButton(
           shape: CircleBorder(
             side: BorderSide(
@@ -553,15 +553,15 @@ class MeetingView extends GetView<MeetingController> {
             ),
           ),
           child: Icon(
-            CommunityMaterialIcons.video_switch,
+            CommunityMaterialIcons.camera_flip,
             color: Colors.white,
           ),
           onPressed: controller._switchCamera,
         ),
       ),
       SizedBox(
-        width: 36,
-        height: 36,
+        width: 60,
+        height: 60,
         child: RawMaterialButton(
           shape: CircleBorder(
             side: BorderSide(
@@ -579,9 +579,9 @@ class MeetingView extends GetView<MeetingController> {
           onPressed: controller._turnMicrophone,
         ),
       ),
-      SizedBox(
-        width: 36,
-        height: 36,
+      /*SizedBox(
+        width: 60,
+        height: 60,
         child: RawMaterialButton(
           shape: CircleBorder(
             side: BorderSide(
@@ -597,10 +597,10 @@ class MeetingView extends GetView<MeetingController> {
               )),
           onPressed: controller._switchSpeaker,
         ),
-      ),
+      ),*/
       SizedBox(
-        width: 36,
-        height: 36,
+        width: 60,
+        height: 60,
         child: RawMaterialButton(
           shape: CircleBorder(
             side: BorderSide(
@@ -615,9 +615,9 @@ class MeetingView extends GetView<MeetingController> {
           onPressed: controller._hangUp,
         ),
       ),
-      SizedBox(
-          width: 36,
-          height: 36,
+      /*SizedBox(
+          width: 60,
+          height: 60,
           child: DropdownButton<String>(
               items: <String>['f', 'h', 'q'].map((String value) {
                 return DropdownMenuItem<String>(
@@ -657,7 +657,7 @@ class MeetingView extends GetView<MeetingController> {
               icon: Icon(
                 CommunityMaterialIcons.picture_in_picture_top_right_outline,
                 color: Colors.white,
-              ))),
+              ))),*/
     ];
   }
 
