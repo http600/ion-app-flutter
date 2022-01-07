@@ -1,7 +1,7 @@
 part of 'app_pages.dart';
 
 abstract class Routes {
-  static const Home = 'Login';
+  static const Home = 'meeting';
   static const NotFound = '/not-found';
 }
 

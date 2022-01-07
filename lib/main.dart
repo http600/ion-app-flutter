@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       enableLog: true,
       theme: mDefaultTheme,
       logWriterCallback: Logger.write,
-      initialRoute: AppPages.init,
+      initialRoute: '/player',
       getPages: AppPages.routes,
     );
   }

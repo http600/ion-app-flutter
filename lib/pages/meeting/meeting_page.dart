@@ -92,9 +92,9 @@ class MeetingController extends GetxController {
 
     if (room == null || rtc == null) {
       print(":::ROOM or SFU is not initialized!:::");
-      print("Goback to /login");
+      print("Goback to /player");
       SchedulerBinding.instance!.addPostFrameCallback((_) {
-        Get.offNamed('/login');
+        Get.offNamed('/player');
         _cleanUp();
       });
       return;

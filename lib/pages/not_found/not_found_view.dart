@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ion/pages/player/players.dart';
 
 class NotFound extends StatelessWidget {
   @override
@@ -14,7 +15,7 @@ class NotFound extends StatelessWidget {
             const SizedBox(height: 25),
             ElevatedButton(
               child: Text('Back to Login', style: TextStyle(fontSize: 30)),
-              onPressed: () => Get.offNamed('/login'),
+              onPressed: () => Get.offNamed("/player"),
             )
           ],
         ),

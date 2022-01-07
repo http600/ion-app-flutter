@@ -3,7 +3,7 @@ import 'package:ion/pages/meeting/meeting_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:ion/utils/utils.dart';
 import 'package:get/get.dart';
-
+/*
 class LoginBinding implements Bindings {
   @override
   void dependencies() {
@@ -155,4 +155,4 @@ class LoginView extends GetView<LoginController> {
           ]));
     });
   }
-}
+}*/

@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 import 'package:ion/pages/chat/chat_page.dart';
+import 'package:ion/pages/player/players.dart';
 import '../pages/login/login_page.dart';
+import '../pages/player/players.dart';
 import '../pages/meeting/meeting_page.dart';
 import '../pages/settings/settings_page.dart';
 part 'app_routes.dart';
@@ -10,12 +12,12 @@ class AppPages {
   static String init = Routes.Home.nameToRoute();
 
   static final routes = [
-    GetPage(
+    /*GetPage(
       name: '/login',
       title: 'Login View',
       page: () => LoginView(),
       binding: LoginBinding(),
-    ),
+    ),*/
     GetPage(
       name: '/meeting',
       title: 'Meeting View',
@@ -33,6 +35,12 @@ class AppPages {
       title: 'Chat View',
       page: () => ChatView(),
       binding: ChatBinding(),
+    ),
+    GetPage(
+      name: '/player',
+      title: 'Player View',
+      page: () => PlayerView(),
+      binding: PlayerBinding(),
     ),
   ];
 }
