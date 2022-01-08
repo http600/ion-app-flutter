@@ -683,7 +683,7 @@ class MeetingView extends GetView<MeetingController> {
                           ),
                           Positioned(
                             right: 10,
-                            top: 48,
+                            top: 10,
                             child: Container(
                               child: _buildLocalVideo(orientation),
                             ),
@@ -729,7 +729,7 @@ class MeetingView extends GetView<MeetingController> {
                       ],
                     ),
                   ),
-                  Positioned(
+                  /*Positioned(
                     left: 0,
                     right: 0,
                     top: 0,
@@ -781,7 +781,7 @@ class MeetingView extends GetView<MeetingController> {
                         ),
                       ],
                     ),
-                  ),
+                  ),*/
                 ],
               ),
             )),
