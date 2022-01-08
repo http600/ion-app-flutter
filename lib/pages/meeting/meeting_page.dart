@@ -1,12 +1,11 @@
+import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter_webrtc/flutter_webrtc.dart';
 import 'package:flutter_ion/flutter_ion.dart';
-import 'package:community_material_icon/community_material_icon.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:ion/controllers/ion_controller.dart';
+import 'package:flutter_webrtc/flutter_webrtc.dart';
 import 'package:get/get.dart';
-import 'package:ion/utils/utils.dart';
+import 'package:ion/controllers/ion_controller.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MeetingBinding implements Bindings {
   @override
@@ -383,6 +382,7 @@ class MeetingView extends GetView<MeetingController> {
   final double localWidth = 114.0;
   final double localHeight = 72.0;
   String dropdownValue = 'Simulcast';
+
   BoxSize localVideoBoxSize(Orientation orientation) {
     return BoxSize(
       width: (orientation == Orientation.portrait) ? localHeight : localWidth,
@@ -435,12 +435,12 @@ class MeetingView extends GetView<MeetingController> {
           height: size.height,
           child: Container(
             decoration: BoxDecoration(
-              color: Colors.black87,
-              border: Border.all(
-                color: Colors.white,
-                width: 0.5,
-              ),
-            ),
+                color: Colors.black87,
+                border: Border.all(
+                  color: Colors.white,
+                  width: 0.5,
+                ),
+                borderRadius: BorderRadius.circular(5)),
             child: GestureDetector(
                 onTap: () {
                   controller._switchCamera();
@@ -504,7 +504,7 @@ class MeetingView extends GetView<MeetingController> {
   //tools
   List<Widget> _buildTools() {
     return <Widget>[
-     /* SizedBox(
+      /* SizedBox(
         width: 60,
         height: 60,
         child: RawMaterialButton(
