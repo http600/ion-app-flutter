@@ -554,11 +554,14 @@ class MeetingView extends GetView<MeetingController> {
               width: 1,
             ),
           ),
-          child: Icon(
-            CommunityMaterialIcons.camera_flip,
-            color: Colors.white,
-          ),
-          onPressed: controller._switchCamera,
+          child: Obx(() => Icon(
+                controller._microphoneOff.value
+                    ? CommunityMaterialIcons.microphone_off
+                    : CommunityMaterialIcons.microphone,
+                color:
+                    controller._microphoneOff.value ? Colors.red : Colors.white,
+              )),
+          onPressed: controller._turnMicrophone,
         ),
       ),
       SizedBox(
@@ -571,14 +574,11 @@ class MeetingView extends GetView<MeetingController> {
               width: 1,
             ),
           ),
-          child: Obx(() => Icon(
-                controller._microphoneOff.value
-                    ? CommunityMaterialIcons.microphone_off
-                    : CommunityMaterialIcons.microphone,
-                color:
-                    controller._microphoneOff.value ? Colors.red : Colors.white,
-              )),
-          onPressed: controller._turnMicrophone,
+          child: Icon(
+            CommunityMaterialIcons.camera_flip,
+            color: Colors.white,
+          ),
+          onPressed: controller._switchCamera,
         ),
       ),
       /*SizedBox(
