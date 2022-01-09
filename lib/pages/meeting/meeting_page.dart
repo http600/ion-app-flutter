@@ -379,7 +379,7 @@ class MeetingView extends GetView<MeetingController> {
 
   VideoRendererAdapter? get localVideo => controller._localVideo;
 
-  final double localWidth = 114.0;
+  final double localWidth = 128.0;
   final double localHeight = 72.0;
   String dropdownValue = 'Simulcast';
 
