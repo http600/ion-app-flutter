@@ -433,24 +433,26 @@ class MeetingView extends GetView<MeetingController> {
       return SizedBox(
           width: size.width,
           height: size.height,
-          child: Container(
-            decoration: BoxDecoration(
-                color: Colors.black87,
-                border: Border.all(
-                  color: Colors.white,
-                  width: 0.5,
-                ),
-                borderRadius: BorderRadius.circular(5)),
-            child: GestureDetector(
-                onTap: () {
-                  controller._switchCamera();
-                },
-                onDoubleTap: () {
-                  localVideo?.switchObjFit();
-                },
-                child: RTCVideoView(localVideo!.renderer!,
-                    objectFit: localVideo!.objFit)),
-          ));
+          child: ClipRRect(
+              borderRadius: BorderRadius.circular(5),
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.black87,
+                    /*border: Border.all(
+                      color: Colors.white,
+                      width: 0.5,
+                    ),
+                    borderRadius: BorderRadius.circular(5)*/),
+                child: GestureDetector(
+                    onTap: () {
+                      controller._switchCamera();
+                    },
+                    onDoubleTap: () {
+                      localVideo?.switchObjFit();
+                    },
+                    child: RTCVideoView(localVideo!.renderer!,
+                        objectFit: localVideo!.objFit)),
+              )));
     });
   }
 
