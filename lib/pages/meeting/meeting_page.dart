@@ -131,7 +131,7 @@ class MeetingController extends GetxController {
         await _ionController.joinRTC();
 
         var resolution = prefs.getString('resolution') ?? 'hd';
-        var codec = prefs.getString('codec') ?? 'vp8';
+        var codec = prefs.getString('codec') ?? 'h264';
         var simulcast = prefs.getBool('simulcast') ?? false;
         print('simulcast=${simulcast}');
         _localStream = await LocalStream.getUserMedia(

@@ -29,7 +29,7 @@ class SettingsController extends GetxController {
     _resolution.value = prefs.getString('resolution') ?? 'vga';
     _bandwidth.value = prefs.getString('bandwidth') ?? '512';
     _displayName.value = prefs.getString('display_name') ?? 'Guest';
-    _codec.value = prefs.getString('codec') ?? 'vp8';
+    _codec.value = prefs.getString('codec') ?? 'h264';
     _simulcast.value = prefs.getBool('simulcast') ?? false;
   }
 
