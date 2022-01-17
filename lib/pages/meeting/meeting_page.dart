@@ -393,10 +393,11 @@ class MeetingView extends GetView<MeetingController> {
   Widget _buildMajorVideo() {
     return Obx(() {
       if (remoteVideos.isEmpty) {
-        return Image.asset(
+        /*return Image.asset(
           'assets/images/loading.jpeg',
           fit: BoxFit.cover,
-        );
+        );*/
+        return Container();
       }
       var adapter = remoteVideos[0];
       return GestureDetector(
@@ -492,7 +493,7 @@ class MeetingView extends GetView<MeetingController> {
             width: 10,
           ),
           Text(
-            'Waiting for others to join...',
+            'Calling...',
             style: TextStyle(
                 color: Colors.white,
                 fontSize: 22.0,
