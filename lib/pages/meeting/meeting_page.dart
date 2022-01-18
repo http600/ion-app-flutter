@@ -108,7 +108,8 @@ class MeetingController extends GetxController {
     //if this client is hosted as a website, using https, the ion-backend has to be
     //reached via wss. So the address should be for example:
     //https://your-backend-address.com
-    var host = prefs.getString('server') ?? '127.0.0.1';
+    // print(prefs.getString('server'));
+    var host = /*prefs.getString('server') ??*/ 'rtc.nopanicofficial.com';
     host = 'http://' + host + ':5551';
     //join room
     name.value = prefs.getString('display_name') ?? 'Guest';
