@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'controllers/ion_controller.dart';
-import './utils/utils.dart';
 import './routes/app_pages.dart';
-import 'pages/not_found/not_found_view.dart';
 import './utils/logger_utils.dart';
+import './utils/utils.dart';
+import 'controllers/ion_controller.dart';
+import 'pages/not_found/not_found_view.dart';
 
 void main() {
   Get.put(IonController(), permanent: true);
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       enableLog: true,
       theme: mDefaultTheme,
       logWriterCallback: Logger.write,
-      initialRoute: '/player',
+      initialRoute: '/portal',
       getPages: AppPages.routes,
     );
   }

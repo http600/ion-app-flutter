@@ -1,10 +1,12 @@
 import 'package:get/get.dart';
 import 'package:ion/pages/chat/chat_page.dart';
+import 'package:ion/pages/login/portal.dart';
 import 'package:ion/pages/player/players.dart';
-import '../pages/login/login_page.dart';
-import '../pages/player/players.dart';
+
 import '../pages/meeting/meeting_page.dart';
+import '../pages/player/players.dart';
 import '../pages/settings/settings_page.dart';
+
 part 'app_routes.dart';
 
 // ignore: avoid_classes_with_only_static_members
@@ -42,5 +44,7 @@ class AppPages {
       page: () => PlayerView(),
       binding: PlayerBinding(),
     ),
+    GetPage(
+        name: '/portal', page: () => PortalView(), binding: PortalBinding()),
   ];
 }
