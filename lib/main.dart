@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ion/pages/login/portal.dart';
 
 import './routes/app_pages.dart';
 import './utils/logger_utils.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       theme: mDefaultTheme,
       logWriterCallback: Logger.write,
       initialRoute: '/portal',
+      initialBinding: PortalBinding(),
       getPages: AppPages.routes,
     );
   }

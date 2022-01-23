@@ -51,7 +51,7 @@ class PlayerController extends GetxController with StateMixin<List<dynamic>> {
     prefs.setString('server', _server.value);
     prefs.setString('room', _sid.value);
     _meetingController.connect();
-    Get.to(() => MeetingView());
+    Get.to(() => MeetingView(), binding: MeetingBinding());
     return true;
   }
 

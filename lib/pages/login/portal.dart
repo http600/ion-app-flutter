@@ -9,12 +9,28 @@ import 'package:ion/pages/player/players.dart';
 class PortalBinding extends Bindings {
   @override
   void dependencies() {
+    Get.lazyPut(() => PortalController());
     Get.lazyPut(() => PlayerController());
-    Get.lazyPut(() => MeetingController());
+    // Get.lazyPut(() => MeetingController());
   }
 }
 
-class PortalController extends GetxController {}
+class PortalController extends GetxController {
+  @override
+  @mustCallSuper
+  void onInit() async {
+    super.onInit();
+  }
+
+  @override
+  void onClose() {
+    super.onClose();
+  }
+
+  void handleTakeIn() {
+    Get.off(() => PlayerView(), binding: PlayerBinding());
+  }
+}
 
 class PortalView extends GetView<PortalController> {
   @override
@@ -80,6 +96,6 @@ class PortalView extends GetView<PortalController> {
   }
 
   void onPressed() {
-    Get.to(() => PlayerView());
+    controller.handleTakeIn();
   }
 }
