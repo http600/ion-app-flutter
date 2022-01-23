@@ -80,6 +80,6 @@ class PortalView extends GetView<PortalController> {
   }
 
   void onPressed() {
-    Get.to(PlayerView());
+    Get.to(() => PlayerView());
   }
 }
