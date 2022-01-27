@@ -3,7 +3,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
-import 'package:ion/pages/meeting/meeting_page.dart';
 import 'package:ion/pages/player/players.dart';
 
 class PortalBinding extends Bindings {
@@ -16,6 +15,9 @@ class PortalBinding extends Bindings {
 }
 
 class PortalController extends GetxController {
+  String authCode = '';
+  PhoneNumber phoneNumber = PhoneNumber();
+
   @override
   @mustCallSuper
   void onInit() async {
@@ -53,6 +55,7 @@ class PortalView extends GetView<PortalController> {
                     ),
                   ),
                 ),
+                Spacer(),
                 Container(
                   child: InternationalPhoneNumberInput(
                       spaceBetweenSelectorAndTextField: 0,
@@ -66,6 +69,9 @@ class PortalView extends GetView<PortalController> {
                     obscureText: true,
                     enableSuggestions: false,
                     autocorrect: false,
+                    onChanged: (String text) => onChangedTextFormField(text),
+                    onFieldSubmitted: (String text) =>
+                        onFieldSubmittedTextFormField(text),
                   ),
                 ),
                 Container(
@@ -73,7 +79,8 @@ class PortalView extends GetView<PortalController> {
                     children: [
                       Center(
                         child: TextButton(
-                            onPressed: onPressed, child: Text('TAKE ME IN')),
+                            onPressed: onPressedTextButton,
+                            child: Text('TAKE ME IN')),
                       ),
                     ],
                   ),
@@ -92,10 +99,24 @@ class PortalView extends GetView<PortalController> {
   }
 
   onInputChanged(PhoneNumber number) {
-    print(number);
+    // print('onInputChanged: ' + number.toString());
+    controller.phoneNumber = number;
   }
 
-  void onPressed() {
-    controller.handleTakeIn();
+  void onPressedTextButton() {
+    print(controller.phoneNumber.phoneNumber);
+    print(controller.authCode);
+    if (null != controller.phoneNumber.phoneNumber &&
+        controller.phoneNumber.phoneNumber!.endsWith(controller.authCode))
+      controller.handleTakeIn();
+  }
+
+  onChangedTextFormField(String text) {
+    // print('onChangedTextFormField: ' + text);
+    controller.authCode = text;
+  }
+
+  onFieldSubmittedTextFormField(String text) {
+    // print('onFieldSubmittedTextFormField: ' + text);
   }
 }
