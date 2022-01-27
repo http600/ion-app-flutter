@@ -104,8 +104,8 @@ class PortalView extends GetView<PortalController> {
   }
 
   void onPressedTextButton() {
-    print(controller.phoneNumber.phoneNumber);
-    print(controller.authCode);
+    // print(controller.phoneNumber.phoneNumber);
+    // print(controller.authCode);
     if (null != controller.phoneNumber.phoneNumber &&
         controller.phoneNumber.phoneNumber!.endsWith(controller.authCode))
       controller.handleTakeIn();
