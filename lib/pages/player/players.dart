@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ion/pages/meeting/meeting_page.dart';
+import 'package:ion_flutter_app/pages/meeting/meeting_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Provider extends GetConnect {

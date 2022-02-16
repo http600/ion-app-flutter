@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ion/pages/player/players.dart';
+import 'package:ion_flutter_app/pages/player/players.dart';
 
 class NotFound extends StatelessWidget {
   @override

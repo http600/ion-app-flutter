@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:ion/pages/chat/chat_page.dart';
-import 'package:ion/pages/login/portal.dart';
-import 'package:ion/pages/player/players.dart';
+import 'package:ion_flutter_app/pages/chat/chat_page.dart';
+import 'package:ion_flutter_app/pages/login/portal.dart';
+import 'package:ion_flutter_app/pages/player/players.dart';
 
 import '../pages/meeting/meeting_page.dart';
 import '../pages/player/players.dart';

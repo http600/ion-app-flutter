@@ -4,7 +4,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_ion/flutter_ion.dart';
 import 'package:flutter_webrtc/flutter_webrtc.dart';
 import 'package:get/get.dart';
-import 'package:ion/controllers/ion_controller.dart';
+import 'package:ion_flutter_app/controllers/ion_controller.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class MeetingBinding implements Bindings {

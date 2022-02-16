@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:date_format/date_format.dart';
-import 'package:ion/controllers/ion_controller.dart';
-import 'package:ion/pages/chat/chat_message.dart';
+import 'package:ion_flutter_app/controllers/ion_controller.dart';
+import 'package:ion_flutter_app/pages/chat/chat_message.dart';
 import 'package:flutter_ion/flutter_ion.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';

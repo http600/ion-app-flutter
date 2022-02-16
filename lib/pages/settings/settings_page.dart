@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ion/utils/utils.dart';
+import 'package:ion_flutter_app/utils/utils.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../controllers/ion_controller.dart';
