@@ -1,7 +1,7 @@
 #!/bin/bash
 
 FLUTTER_APP_FOLDER=$(cd `dirname $0`/../; pwd)
-FLUTTER_APP_ORG=com.github.pion.ion
+FLUTTER_APP_ORG=com.github.http600.ion
 FLUTTER_APP_PROJECT_NAME=ion_flutter_app
 CMD=$1
 
