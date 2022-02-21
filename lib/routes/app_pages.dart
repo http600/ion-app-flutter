@@ -44,7 +44,7 @@ class AppPages {
       page: () => PlayerView(),
       binding: PlayerBinding(),
     ),
-    GetPage(
-        name: '/portal', page: () => PortalView(), binding: PortalBinding()),
+    // GetPage(
+    //     name: '/portal', page: () => PortalView(), binding: PortalBinding()),
   ];
 }
