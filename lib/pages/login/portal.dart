@@ -2,7 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:intl_phone_number_input/intl_phone_number_input.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:intl_phone_field/phone_number.dart';
 import 'package:ion_flutter_app/pages/player/players.dart';
 
 class PortalBinding extends Bindings {
@@ -15,8 +16,8 @@ class PortalBinding extends Bindings {
 }
 
 class PortalController extends GetxController {
+  late PhoneNumber phoneNumber;
   String authCode = '';
-  PhoneNumber phoneNumber = PhoneNumber();
 
   @override
   @mustCallSuper
@@ -57,12 +58,18 @@ class PortalView extends GetView<PortalController> {
                 ),
                 Spacer(),
                 Container(
-                  child: InternationalPhoneNumberInput(
-                      spaceBetweenSelectorAndTextField: 0,
-                      scrollPadding: EdgeInsets.all(0),
-                      initialValue: PhoneNumber(isoCode: 'CN'),
-                      onInputChanged: (PhoneNumber number) =>
-                          onInputChanged(number)),
+                  child: IntlPhoneField(
+                    decoration: InputDecoration(
+                      labelText: 'Phone Number',
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(),
+                      ),
+                    ),
+                    initialCountryCode: 'IN',
+                    onChanged: (phone) {
+                      onInputChanged(phone);
+                    },
+                  ),
                 ),
                 Container(
                   child: TextFormField(
@@ -106,8 +113,7 @@ class PortalView extends GetView<PortalController> {
   void onPressedTextButton() {
     // print(controller.phoneNumber.phoneNumber);
     // print(controller.authCode);
-    if (null != controller.phoneNumber.phoneNumber &&
-        controller.phoneNumber.phoneNumber!.endsWith(controller.authCode))
+    if (controller.phoneNumber.number.endsWith(controller.authCode))
       controller.handleTakeIn();
   }
 
